@@ -224,3 +224,48 @@
 .bg4>div{
         padding: 120px 0 0 360px;
 } 
+
+.footer{
+    /* width: 100%; */
+    color: white;
+    height: 60%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.faqdetails>h2{
+    padding-bottom: 10px;
+}
+
+.faqdetails{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.faqdetails>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+hr{
+    opacity: 0.4;
+}
+
+.faqdetails>div>img{
+    width: 10px;
+}
+
+.helpcenter{
+    padding-top: 50px;
+}
+
+.helpcenter>span{
+    color: #3ea6ff;
+}

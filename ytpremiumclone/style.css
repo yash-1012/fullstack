@@ -7,9 +7,12 @@
 .container{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .navbar{
+    position: sticky;
+    top: 0;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -95,7 +98,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 22px;
     /* font-size: ; */
 }
 
@@ -132,3 +135,92 @@
 .ytpremiumdetails>p>span{
     color: #4eb0fc;
 }
+
+.features{
+    margin-top:50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.features > .left, .features>.center, .features>.right{
+    width: 18%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.features>div>h2{
+    font-weight: 600;
+}
+
+.features>div>p{
+    color: white;
+    font-size: 12px;
+}
+
+.bg1{
+    background-image: url("assets/img/bg1.jpeg");
+    height: 55%;
+    background-size: cover;
+}
+
+.bg1>div>h2,.bg2>div>h2,.bg3>div>h2,.bg4>div>h2{
+    font-size: 4em;
+    font-weight: lighter;
+}
+
+.bg1>div{
+    padding: 120px 0 0 680px;
+}
+
+.bg1>div,.bg2>div,.bg3>div,.bg4>div{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bg1>div>p,.bg2>div>p,.bg3>div>p.bg4>div>p{
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.bg2{
+    background-image: url("assets/img/bg2.jpeg");
+    height: 55%;
+    background-size: cover;
+}
+
+.bg2>div{
+        padding: 120px 0 0 360px;
+}
+
+.bg3{
+    background-image: url("assets/img/bg3.jpeg");
+    height: 55%;
+    background-size: cover;
+}
+
+.bg3>div{
+    padding: 120px 0 0 680px;
+}
+
+.bg4{
+    background-image: url("assets/img/bg4.jpeg");
+    height: 55%;
+    background-size: cover;
+}
+
+.bg4>div{
+        padding: 120px 0 0 360px;
+} 

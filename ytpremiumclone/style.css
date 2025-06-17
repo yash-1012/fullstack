@@ -3,3 +3,132 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 16px;
+}
+
+.leftbar{
+    display: flex;
+    gap: 20px;
+}
+
+.leftbar img:nth-child(2){
+    width: 90px;
+}
+
+.centernav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.centernav>input{
+    border: none;
+    width: 60%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 55%;
+    padding: 8px 15px;
+    border: 0.2px solid #3f3f3f;
+    border-right: 0;
+    background-color: black;
+    font-size: 16px;
+}
+
+.centernav>input::placeholder{
+    color: rgba(255, 255, 255, 0.726);
+}
+
+/* 
+.centernav>input:active{
+    border: none;
+    border: 0.5px solid blue;
+} */
+
+.centernav img:nth-child(2){
+    padding: 3px 10px;
+    background-color: #121212;
+    border-bottom-right-radius:20px;
+    border-top-right-radius: 20px;
+    border: 0.2px solid #3f3f3f;
+    cursor: pointer;
+}
+
+.centernav img:nth-child(3){
+    margin-left: 5px;
+    padding: 3px 7px;
+    background-color: #121212;
+    border-radius: 20px;
+    border: 1px solid #3f3f3fb4;
+}
+
+.rightnav{
+    margin-right: 25px;
+    display: flex;
+    gap: 18px;
+}
+
+.rightnav>img{
+    width: 27px;
+}
+
+.rightnav img:nth-child(3){
+    /* padding:5px; */
+    /* background-color:white; */
+    border-radius: 50px;
+}
+
+.ytpremium{
+    padding-top: 50px;
+    height: 61%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* font-size: ; */
+}
+
+.ytdesc>h2{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.ytpremiumdetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ytpremiumdetails>button{
+    padding: 7px 30px;
+    border-radius: 20px;
+    /* width: 40%; */
+    border: none;
+    font-weight: 600;
+    background-color: #3ea6ff;
+}
+
+.ytpremiumdetails >p{
+    text-align: center;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.ytpremiumdetails>p>span{
+    color: #4eb0fc;
+}

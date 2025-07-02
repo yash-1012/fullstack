@@ -37,6 +37,8 @@
 }
 
 .feature{
+    position: relative;
+    cursor: pointer;
     display: flex;
     gap: 5px;
     justify-content: center;
@@ -44,12 +46,34 @@
 }
 
 .feature>p, .centernav>p{
+    cursor: pointer;
     font-size: 16px;
     font-weight: 300;
 }
 
 .feature>img{
     transform: rotate(-90deg);
+}
+
+.slide{
+    position: relative;
+}
+
+.feature::after, .slide::after{
+    content: "";
+    background-color: rgb(37, 211, 102);
+    top: 18px;
+    right: 0px;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: all 0.6s ease-in-out;
+    transform-origin: left;
+}
+
+.feature:hover::after,.slide:hover::after{
+    transform: scaleX(1);
 }
 
 .rightnav>button{
@@ -67,4 +91,35 @@
 
 .rightnav>button>img{
     transform: rotate(135deg);
+}
+
+
+.firstSection{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.maaBeti{
+    background-image: url(images/MaaBeti.png);
+    margin-top: 15px;
+    height: 100%;
+    width: 98%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.firstSection>p{
+    /* width: 98%; */
+    position: relative;
+    /* left: -2%; */
+    top: 6px;
+    left: 34% ;
+    font-size: 12px;
+    opacity: 0.8;
 }

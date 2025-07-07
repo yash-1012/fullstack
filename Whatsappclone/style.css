@@ -25,6 +25,7 @@
 .navbar>img{
     width: 128px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .centernav{
@@ -38,6 +39,7 @@
 }
 
 .feature{
+    overflow: hidden;
     position: relative;
     cursor: pointer;
     display: flex;
@@ -58,6 +60,7 @@
 
 .slide{
     position: relative;
+    overflow: hidden;
 }
 
 .feature::after, .slide::after{
@@ -88,6 +91,7 @@
     background-color: rgb(37, 211, 102);
     font-size: 16px;
     border-width:thin;
+    cursor: pointer;
 }
 
 .rightnav>button>img, .btn>img{
@@ -438,22 +442,72 @@
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-around;
 }
 
 .footerPoints>p{
-    font-size: 12px;
+    font-size: 10px;
+}
+
+ul>li{
+    margin-top: 10px;
+}
+
+ul>li:hover{
+    text-decoration:underline white solid;
+    text-underline-offset: 3px;
 }
 
 hr{
     width: 60%;
+    opacity: 0.6;
 }
 
 .lower{
+    /* line-height: 150px; */
     width: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
+    padding: 0 10px;
 }
+
+.lower>p{
+    font-size: 15px;
+}
+
+.social>i{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.social i:nth-child(3){
+    padding: 10px 11px;
+}
+
+.social i:nth-child(4){
+    padding: 10px 14px;
+}
+
+.language>select{
+    -webkit-appearance: none;
+    background-color: #111b21;
+    color: white;
+    padding: 16px 60px 16px 18px;
+    border-radius: 30px;
+    text-align: left;
+    position: relative;
+}
+
+.language>img{
+    position: relative;
+    /* width: 100%; */
+    top: 4px;
+    right: 25px;
+    rotate: 270deg;
+}
+

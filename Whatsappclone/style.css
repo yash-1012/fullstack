@@ -81,6 +81,7 @@
 }
 
 .rightnav>button, .btn{
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,10 +93,34 @@
     font-size: 16px;
     border-width:thin;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .rightnav>button>img, .btn>img{
     transform: rotate(135deg);
+}
+
+.btn::before{
+    height:500px;
+    width: 500px;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -150px;
+    transition: 0.6s 0.5s;
+    transform: translateY(50px);
+}
+
+.btn:hover::before{
+        opacity: 1;
+        transform: translateY(-20px);
 }
 
 
@@ -356,6 +381,7 @@
 
 .learnMore{
     position: relative;
+    cursor: pointer;
 }
 
 .learnMore>p{
@@ -478,11 +504,18 @@ hr{
     font-size: 15px;
 }
 
-.social>i{
+.social{
+    position: relative;
+    overflow: hidden;
+}
+
+.socialIcon{
+    z-index: 1;
     border: 1px solid white;
     padding: 10px;
     border-radius: 50%;
     margin: 0 2px;
+    cursor: pointer;
 }
 
 .social i:nth-child(3){
@@ -491,6 +524,28 @@ hr{
 
 .social i:nth-child(4){
     padding: 10px 14px;
+}
+
+.socialIcon::before{
+    
+
+    
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: #25d366;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 0.6s 0.5s;
+    transform: translateY(50px);
+}
+
+.socialIcon:hover::before{
+        opacity: 1;
+        transform: translateY(-20px);
 }
 
 .language>select{

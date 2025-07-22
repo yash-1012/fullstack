@@ -9,6 +9,8 @@ const lowerCase = document.getElementById('lowercase');
 const numberBox = document.getElementById('number');
 const symbolBox = document.getElementById('symbol');
 
+ const copyBtn = document.getElementById("copy-btn");
+
 
 PassLength.addEventListener("input", (e)=>{
     e.preventDefault();
@@ -41,6 +43,14 @@ GenPassBtn.addEventListener("click",(e)=>{
         finalStr += Symbol;
     }
 
+    // if(!upperCase.checked && !lowerCase.checked && !numberBox.checked && !symbolBox.checked){
+    //     alert("Please select atleast one checkbox");
+    // }
+
+    if(finalStr==''){
+        alert("Please select atleast one checkbox");
+    }
+
     let latestPass = '';
     
     // console.log(finalStr);
@@ -54,3 +64,9 @@ GenPassBtn.addEventListener("click",(e)=>{
 
 
 });
+
+copyBtn.addEventListener("click",()=>{
+    // console.log("password copied");
+
+    window.navigator.clipboard.writeText(GenPass.innerText);
+})

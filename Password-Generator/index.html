@@ -9,34 +9,34 @@
 <body>
     <div class="container">
         <div class="Password">
-            <span id="GenPass">fdajDASFDfdsj</span>
+            <span id="GenPass"></span>
             <button id="copy-btn">Copy</button>
         </div>
 
-        <div class="range">
-            <input type="range" name="" id="">
-            <p>15</p>
+        <div id="range">
+            <input type="range" name="" id="PassLength" min="6" max="20" value="10">
+            <p id="rangeValue"></p>
         </div>
 
         <div class="PasswordType">
             <p>Password includes:</p>
             <div class="Type">
-                <input type="checkbox" name="UpperCase" id="">
+                <input type="checkbox" name="UpperCase" id="uppercase">
                 <label for="UpperCase">Upper Case</label>
             </div>
             
             <div class="Type">
-                <input type="checkbox" name="LowerCase" id="">
+                <input type="checkbox" name="LowerCase" id="lowercase">
                 <label for="LowerCase">Lower Case</label>
             </div>
 
             <div class="Type">
-                <input type="checkbox" name="Number" id="">
+                <input type="checkbox" name="Number" id="number">
                 <label for="Number">Number</label>
             </div>
 
             <div class="Type">                
-                <input type="checkbox" name="Symbol" id="">
+                <input type="checkbox" name="Symbol" id="symbol">
                 <label for="Symbol">Symbols</label>
             </div>
         </div>

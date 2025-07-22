@@ -2,19 +2,21 @@ const GenPassBtn = document.getElementById("GenPass-btn");
 const GenPass = document.getElementById("GenPass");
 const PassLength = document.getElementById("PassLength");
 const rangeVal = document.getElementById("rangeValue")
-rangeVal.innerText = PassLength.value;
+rangeVal.innerText = PassLength.value + " Digits";
 
 const upperCase = document.getElementById('uppercase');
 const lowerCase = document.getElementById('lowercase');
 const numberBox = document.getElementById('number');
 const symbolBox = document.getElementById('symbol');
 
- const copyBtn = document.getElementById("copy-btn");
+const copyBtn = document.getElementById("copy-btn");
+
+const viewBtn = document.getElementById("viewBtn");
 
 
 PassLength.addEventListener("input", (e)=>{
     e.preventDefault();
-    rangeVal.innerText = e.target.value;
+    rangeVal.innerText = e.target.value + " Digits";
 });
 
 GenPassBtn.addEventListener("click",(e)=>{
@@ -60,13 +62,23 @@ GenPassBtn.addEventListener("click",(e)=>{
         latestPass += finalStr.charAt(index);
     }
 
-    GenPass.innerText=latestPass;
-
+    GenPass.value=latestPass;
+    viewBtn.innerHTML='<i class="fa-solid fa-eye-slash fa-xl" style="color: #2b002b;"></i>';
 
 });
+
+function showHidePW(){
+    if(GenPass.type=="password"){
+            GenPass.type="text";
+            viewBtn.innerHTML='<i class="fa-solid fa-eye-slash fa-xl" style="color: #2b002b;"></i>';
+    }else{
+            GenPass.type="password";
+            viewBtn.innerHTML='<i class="fa-regular fa-eye fa-xl" style="color: #2b002b;"></i>';
+    }   
+}
 
 copyBtn.addEventListener("click",()=>{
     // console.log("password copied");
 
-    window.navigator.clipboard.writeText(GenPass.innerText);
-})
+    window.navigator.clipboard.writeText(GenPass.value);
+});

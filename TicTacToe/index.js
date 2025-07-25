@@ -22,7 +22,7 @@ function startGame(e){
     if(e.target.className != 'tictac'){
         if(e.target.innerText ==''){
             e.target.textContent = currentPlayer;
-            
+            count++;
             winner();
 
             if(currentPlayer == 'X'){
@@ -35,6 +35,9 @@ function startGame(e){
             
             }
         }
+    }
+    if(count == 9){
+        winnerdeclare.innerText = "Match is Draw";
     }
 }
 
@@ -52,6 +55,10 @@ function winner(){
     
         if(val0 != '' && val1 != '' && val2 != ''){
             if(val0 == val1 && val0 == val2){
+                count=0;
+                boxes[index0].classList.add('winnerClass');
+                boxes[index1].classList.add('winnerClass');
+                boxes[index2].classList.add('winnerClass');
                 winnerdeclare.innerText = "Winner is " + val0;
                 tictac.removeEventListener('click', startGame);
             }
@@ -64,5 +71,6 @@ rbtn.addEventListener('dblclick', ()=>{
     winnerdeclare.innerText = '';
     boxes.forEach(item => {
         item.innerText = '';
+        item.classList.remove('winnerClass');
     });
 })

@@ -39,3 +39,28 @@ h1{
     justify-content: center;
     border-radius: 8px;
 }
+
+.box:hover{
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+#rbtn{
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    font-weight:600;
+    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0.1px 0.2px grey;
+
+}
+
+#rbtn:hover{
+    background-color: rgb(209, 209, 209);
+}
+
+.winnerClass{
+    background-color: lightgreen;
+}
